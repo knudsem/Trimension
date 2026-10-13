@@ -1,0 +1,248 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Styles for the scroll container and its content */
+.scroll-container {
+    display: flex;
+    flex-direction: column;
+    height: 100svh;
+    /* Full viewport height */
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /* Enable vertical scrolling */
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    /* Enable mandatory vertical scrolling */
+    z-index: 3;
+    -webkit-overflow-scrolling: touch;
+    /* Ipad fix */
+}
+
+.clickos {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+}
+
+.scroll-item {
+    min-height: 100svh;
+    /* Full viewport height for each section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    scroll-snap-align: start;
+    scroll-behavior: smooth;
+    /* Snap each scroll-item to the start */
+}
+
+.scroll-item:nth-child(odd) {
+    background-color: #232323;
+}
+
+.scroll-item:nth-child(even) {
+    background-color: #ccc;
+}
+
+
+
+.demo {
+    height: 100svh;
+    width: 100vw;
+    position: relative;
+}
+
+.demo video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    clip-path: inset(-1px -1px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.info-flex {
+    flex-direction: column;
+    gap: 3.5em;
+    min-height: 150vh !important;
+}
+
+.info-container {
+    display: flex;
+    width: 80%;
+}
+
+.info {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.info-paragraph {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    gap: 25px;
+    color: #fff;
+}
+
+.info-paragraph p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: calc(20px + 0.35vw);
+    font-weight: 300;
+}
+
+.img-info {
+    width: 48%;
+    background: #000000;
+}
+
+.btn {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid #fff;
+    padding: 20px 35px;
+    font-size: calc(20px + 0.35vw);
+    font-weight: 600;
+    background: transparent;
+    position: relative;
+    transition: all 0.7s;
+    overflow: hidden;
+    cursor: pointer;
+    font-family: 'Josefin Sans', sans-serif;
+    position: absolute;
+    width: fit-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn:hover {
+    color: #000;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: -40px;
+    transform: skewX(45deg);
+    background-color: #fff;
+    z-index: -1;
+    transition: all 0.7s;
+}
+
+.btn:hover::before {
+    width: 160%;
+}
+
+.info-paragraph h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: calc(32px + 1.5vw);
+    font-weight: 400;
+}
+
+
+.margin-top {
+    margin-top: 10%;
+}
+
+.item-3 {
+    position: relative;
+    min-height: 125vh;
+    justify-content: flex-start;
+}
+
+@media screen and (max-width: 1025px) {
+    .eons video {
+        width: 200%;
+        left: 100%;
+        transform: translateX(-100%) translateY(-50%);
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .btn {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        font-size: calc(17px + 0.35vw);
+        padding: 25px 15px;
+    }
+
+    .eons video {
+        width: 200%;
+        left: 100%;
+        transform: translateX(-100%) translateY(-50%);
+    }
+
+    footer {
+        bottom: -12%!important;
+    }
+}
+
+@media screen and (max-width: 435px) {
+    .btn {
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        font-size: calc(17px + 0.35vw);
+    }
+
+    .eons video {
+        width: 250%;
+        left: 125%;
+        transform: translateX(-110%) translateY(-50%);
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .btn {
+        width: 75%;
+        display: flex;
+        justify-content: center;
+        font-size: calc(17px + 0.35vw);
+    }
+
+    .eons video {
+        width: 225%;
+    }
+}
+
+
+@media screen and (max-width: 1016px) {
+    .info, .info-paragraph {
+        width: 100%;
+    }
+
+    .info-2 {
+        flex-direction: column-reverse;
+    }
+
+    .img-info {
+        width: 80%;
+        margin: auto;
+        min-height: 100px;
+    }
+
+    .info-flex {
+        height: 200vh;
+        padding: 5px 0px;
+    }
+
+    .scroll-item {
+        min-height: initial;
+    }
+}

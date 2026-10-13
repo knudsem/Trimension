@@ -1,0 +1,148 @@
+.container-general {
+    background-color: #232323;
+    width: 100%;
+    height: fit-content;
+    padding-top: calc(35px + 6.5rem);
+}
+
+.container-margin {
+    width: 80%;
+    margin: auto;
+}
+
+.container-margin h2, .container-margin p, .flex p {
+    color: #fff;
+    text-align: left;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.container-margin h2 {
+    width: 75%;
+    margin-bottom: 4%;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: calc(32px + 1.5vw);
+    font-weight: 400;
+}
+
+.container-margin p, .flex p {
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: calc(20px + 0.35vw);
+    font-weight: 300;
+}
+
+.wall {
+    margin-top: -15%;
+    margin-bottom: -4%;
+}
+
+.orc {
+    display: block;
+    max-width: 65%;
+    width: auto;
+    height: auto;
+}
+
+.mortar {
+    display: block;
+    max-width: 30%;
+    width: auto;
+    height: auto;
+}
+
+.bow {
+    display: block;
+    max-width: 35%;
+    width: auto;
+    height: auto;
+}
+
+.flex {
+    display: flex;
+    padding-bottom: 182px;
+}
+
+.flex p {
+    display: flex;
+    align-items: center;
+}
+
+.flex .orc-text {
+    margin-top: -5%;
+    margin-left: -25%;
+    margin-right: 10%;
+}
+
+.bow-art {
+    margin-top: -8%;
+    margin-bottom: 6%;
+}
+
+@media screen and (max-width: 768px) {
+    .container-margin {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-margin h2 {
+        font-size: calc(24px + 0.35vw);
+        line-height: 30px;
+        width: 100%;
+    }
+
+    .container-margin p {
+        order: 2;
+        font-size: 18px;
+        line-height: initial;
+        text-align: initial;
+    }
+
+    .container-margin img {
+        order: 1;
+    }
+
+    .flex {
+        padding-bottom: 10px;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .mortar {
+        max-width: 40%;
+    }
+
+    .bow {
+        max-width: 45%;
+    }
+
+    .container-general {
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+    }
+
+    .bow-art {
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }
+
+    .margin-mortar {
+        gap: 20px;
+    }
+
+    .flex .orc-text {
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 18px;
+        line-height: initial;
+        text-align: initial;
+        margin: auto;
+        width: 80%;
+    }
+
+    .wrapper-orc {
+        padding-bottom: calc(180px + 20vh);
+    }
+}

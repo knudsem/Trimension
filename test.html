@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin: 0;
+            /* Remove default margin */
+            overflow-x: hidden;
+        }
+        .general-container-hands {
+            overflow-x: hidden;
+        }
+        .content-above {
+            height: 300vh;
+        }
+
+        .container-text {
+            position: relative;
+            z-index: 1;
+            /* Ensure text is below the images */
+        }
+
+        .right-hand {
+            margin-top: -10%;
+        }
+
+        .right-hand,
+        .left-hand {
+            width: 100%;
+            /* Take full width of the screen */
+            max-width: 100%;
+            /* Ensure max-width is 100% */
+            height: auto;
+            /* Maintain aspect ratio while resizing */
+            position: relative;
+            z-index: 2;
+            /* Ensure right-hand is above other elements */
+            transform: translateY(-0%);
+            /* Initial position */
+            transition: transform 0.5s ease;
+            /* Add a smooth transition */
+        }
+
+        .spacer {
+            height: 1px;
+            /* Set height to make the element visible for Intersection Observer */
+        }
+        .container-hand-text {
+            padding-top: 10%;
+        }
+        .left-hand {
+            margin-top: -20%;
+            /* Adjust the margin as needed for overlap */
+            z-index: 1;
+            /* Ensure .left-hand is above .right-hand */
+            margin-top: -45%;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="content-above"></div>
+    <div class="general-container-hands">
+        <div class="container-text">
+            <h1>Bec<img src="style/img/eye-logo.png" alt="" class="eye-logo"> me Agent Steve</h1>
+            <p>The nebulite heist is shattering the world, the gravity is not functioning properly anymore and every
+                step becomes a maze, borders disappear.
+                With the use of the sun fragments, they plan to rewrite the fabric of the universe according to their
+                own
+                desires. The fate of the solar system and the entire galaxy hangs in the balance.</p>
+        </div>
+
+        <img src="style/img/RHand.png" alt="" class="right-hand"
+            style="transition: transform 0.5s ease; transform: translateY(0%);">
+        <div class="spacer"></div> <!-- Add this spacer element -->
+        <img src="style/img/LHand.png" alt="" class="left-hand">
+
+        <div class="container-hands-general">
+            <div class="container-hand-text">
+                <p>
+                    As you step into the shoes of Agent Steve, you find yourself in a dire situation with the solar
+                    system
+                    teetering on the edge of collapse. Humanity's survival hangs by a thread. But Steve isn't your
+                    average
+                    agent; he's a master of the paranormal and a specialist in unraveling spacetime mysteries. Get ready
+                    to
+                    channel your inner Agent Steve, brace yourself for an epic adventure, and dive headfirst into a
+                    cosmic
+                    journey to save humanity from impending doom.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const rightHand = document.querySelector('.right-hand');
+        const spacer = document.querySelector('.spacer');
+        const maxTranslateY = 33; // Maximum translateY percentage (changed to 20%)
+        const maxRotate = 6; // Reduced rotation value
+        const maxTranslateX = 4; // Maximum horizontal translation value (changed to 10 pixels)
+        const transitionDuration = 0.4; // Duration of the transition in seconds
+        let isTranslationSet = false;
+    
+        const updateTranslation = () => {
+            const scrollPercentage = (window.scrollY / (document.body.scrollHeight - window.innerHeight));
+            const translateYPercentage = Math.min(scrollPercentage * maxTranslateY, maxTranslateY);
+            const rotateValue = maxRotate * scrollPercentage;
+            const translateX = maxTranslateX * scrollPercentage;
+    
+            rightHand.style.transition = `transform ${transitionDuration}s ease`;
+            rightHand.style.transform = `translate(${translateX}%, ${translateYPercentage}%) rotate(${rotateValue}deg)`;
+        };
+    
+        // Intersection Observer for setting initial state
+        const observerOptions = {
+            threshold: 0.5,
+        };
+    
+        const intersectionCallback = (entries, observer) => {
+            const isVisible = entries[0].isIntersecting;
+    
+            if (isVisible && !isTranslationSet) {
+                requestAnimationFrame(() => {
+                    updateTranslation();
+                    isTranslationSet = true;
+                });
+            } else if (!isVisible && isTranslationSet) {
+                // Reset when spacer goes out of the viewport
+                rightHand.style.transition = `transform ${transitionDuration}s ease`;
+                rightHand.style.transform = `translate(0px, 0%) rotate(0deg)`;
+                isTranslationSet = false;
+            }
+        };
+    
+        const observer = new IntersectionObserver(intersectionCallback, observerOptions);
+    
+        if (spacer) {
+            observer.observe(spacer);
+        }
+    
+        // Event listener for the scroll event
+        window.addEventListener('scroll', () => {
+            if (isTranslationSet) {
+                updateTranslation();
+            }
+        });
+    </script>
+    
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+ .two-cols {
+     display: flex;
+     margin-bottom: 15px;
+ }
+
+ label {
+     font-family: 'Open Sans';
+ }
+
+ .upload {
+     border: 1px solid rgba(255, 255, 255, 0.35);
+     padding: 1% 3%;
+     color: rgba(255, 255, 255, 0.35);
+     border-radius: 2px;
+     width: 90%;
+ }
+
+ legend {
+     color: #fff;
+     font-family: 'Open sans';
+     font-size: calc(20px + 0.25vw);
+     text-decoration: underline;
+ }
+
+ fieldset:nth-of-type(even) {
+     margin-top: 45px;
+ }
+
+ .possible {
+     color: rgba(255, 255, 255, 0.35) !important;
+     font-size: calc(16px + 0.15vw) !important;
+     margin-bottom: 20px;
+     margin-top: 8px;
+ }
+
+ .small-margin {
+     margin-top: 20px;
+ }
+
+ #ft-form {
+     padding: 2rem 8rem;
+     width: 80%;
+ }
+
+ input#file-upload-button {
+     background-color: #707070;
+     color: #232323;
+ }
+
+ form .input_box {
+     width: 50%;
+     margin-top: 30px;
+     position: relative;
+     color: #707070;
+ }
+
+ form .input_box input {
+     width: 90%;
+     border: none;
+     outline: none;
+     font-size: 25px;
+     padding: 7px 0px;
+     border-bottom: 2px solid #707070;
+     font-family: 'Open Sans';
+ }
+
+ form .input_box label {
+     position: absolute;
+     left: 0px;
+     font-size: 25px;
+     top: 8px;
+     pointer-events: none;
+     transition: 0.2s;
+     font-size: calc(16px + 0.15vw);
+ }
+
+ form .input_box input:focus+label,
+ form .input_box input:valid+label {
+     top: -15px;
+     font-size: 18px;
+     color: rgba(255, 255, 255, 0.35);
+ }
+
+ form .input_box input:focus, form .input_box input:valid {
+     color: #fff;
+ }
+
+ .labello {
+     color: #fff;
+     display: flex;
+     flex-direction: column;
+     gap: 5px;
+     width: 50%;
+ }
+
+ /* Adjusted selector to target the bottom border color */
+ form .input_box input:focus,
+ form .input_box input:valid {
+     color: #fff;
+     border-bottom-color: #fff;
+ }
+
+ .submit {
+     background-color: #fff;
+     border: none;
+     color: #232323;
+     padding: 15px 32px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 16px;
+     border-radius: 8px;
+     cursor: pointer;
+     font-family: 'Josefin sans';
+     font-weight: 600;
+ }
+
+ @media screen and (max-width: 768px) {
+     #ft-form {
+         padding: 0;
+         width: 80%;
+         margin: auto;
+         margin-top: 5%;
+     }
+
+     .two-cols {
+         flex-direction: column;
+     }
+
+     form .input_box {
+         width: 100%;
+     }
+     .labello {
+        width: 100%;
+        margin-top: 15px;
+
+     }
+     .upload {
+        padding: 3% 5%;
+     }
+     .btns {
+        display: flex;
+        justify-content: center;
+     }
+     .container-background {
+        padding-bottom: calc(7rem + 15%);
+     }
+ }

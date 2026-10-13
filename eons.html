@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trimension Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="style/img/favicon2.ico">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/navbaralternate.css">
+    <link rel="stylesheet" href="style/eons.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+</head>
+
+
+<body>
+    <header class="page-header">
+        <nav class="navbar">
+            <div class="trigger-menu-wrapper alternate">
+                <a href="index.html" class="homepage"><img src="style/img/logo.svg" alt=""></a>
+                <label for="menu-control" class="hamburger">
+                    <i class="hamburger__icon"></i>
+                    <i class="hamburger__icon"></i>
+                    <i class="hamburger__icon"></i>
+                </label>
+
+                <input type="checkbox" id="menu-control" class="menu-control">
+
+                <aside class="sidebar">
+
+                    <nav class="sidebar__menu">
+                        <h1>Our games</h1>
+                        <a href="eons.html">Eons</a>
+                        <a href="tower.html">Godsent</a>
+                        <hr>
+                        <a href="about.html">Meet the team</a>
+                        <a href="jobs.html">Join Us</a>
+                    </nav>
+
+                    <label for="menu-control" class="sidebar__close"></label>
+                    
+                    </aside>
+            </div>
+        </nav>
+    </header>
+    <div class="container-background">
+        <div class="container-first-part">
+            <div class="part-left">
+                <img src="style/img/eons.gif" alt="" class="logo-gif">
+                <img src="style/img/nebulite.png" alt="" class="nebulite-mb">
+                <p>Meet the Nebulites and their sinister plan. The Nebulites, who feed on the energy of stars, seek to
+                    harness the power of the sun in our solar system.
+                    With the use of the sun fragments they plan to rewrite the fabric of the universe according to their
+                    own
+                    desires. The fate of the solar system and the entire galaxy hangs in the balance.
+                </p>
+
+                <!-- BUTTON PLAYER  -->
+
+                <!-- <div class="button-and-player">
+                    <svg width="100%" height="100%" viewBox="0 0 335 106" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <path d="M267.587 9H98.8123H1V79.9189L24.9736 105H328V59.1622L267.587 9Z" fill="white"
+                                fill-opacity="0.08" stroke="white" stroke-width="2" />
+                            <text x="70" y="65" font-family="Josefin Sans" font-size="32" fill="#fff">Get Started</text>
+                        </g>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M334.918 11.2379C335.141 11.7747 334.886 12.3899 334.349 12.6121L329.181 14.751C328.644 14.9732 328.029 14.7181 327.807 14.1814C327.585 13.6446 327.84 13.0294 328.376 12.8072L333.544 10.6683C334.081 10.4461 334.696 10.7012 334.918 11.2379Z"
+                            fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M323.756 0.0804639C324.292 0.302934 324.547 0.918309 324.325 1.45494L322.184 6.61856C321.961 7.15519 321.346 7.40987 320.809 7.1874C320.273 6.96493 320.018 6.34955 320.241 5.81292L322.381 0.649305C322.604 0.112672 323.219 -0.142006 323.756 0.0804639Z"
+                            fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M307.966 0.0804637C308.502 -0.142006 309.118 0.112673 309.34 0.649305L311.481 5.81292C311.703 6.34955 311.449 6.96493 310.912 7.1874C310.375 7.40987 309.76 7.15519 309.538 6.61856L307.397 1.45494C307.174 0.918308 307.429 0.302934 307.966 0.0804637Z"
+                            fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M296.801 11.2379C297.023 10.7012 297.638 10.4461 298.175 10.6683L303.343 12.8072C303.88 13.0294 304.135 13.6446 303.913 14.1814C303.69 14.7181 303.075 14.9732 302.538 14.751L297.371 12.6121C296.834 12.3899 296.579 11.7747 296.801 11.2379Z"
+                            fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M303.913 24.0714C304.135 24.6082 303.88 25.2234 303.343 25.4456L298.175 27.5845C297.638 27.8067 297.023 27.5516 296.801 27.0149C296.579 26.4781 296.834 25.8629 297.371 25.6407L302.538 23.5018C303.075 23.2796 303.69 23.5347 303.913 24.0714Z"
+                            fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M310.912 31.0643C311.449 31.2868 311.703 31.9021 311.481 32.4388L309.34 37.6035C309.118 38.1401 308.502 38.3948 307.966 38.1724C307.429 37.95 307.174 37.3346 307.397 36.798L309.538 31.6333C309.76 31.0966 310.375 30.8419 310.912 31.0643Z"
+                            fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M320.81 31.0643C321.346 30.8419 321.962 31.0966 322.184 31.6333L324.325 36.798C324.547 37.3346 324.292 37.95 323.756 38.1724C323.219 38.3948 322.604 38.1401 322.381 37.6035L320.241 32.4388C320.018 31.9021 320.273 31.2868 320.81 31.0643Z"
+                            fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M327.807 24.0714C328.029 23.5347 328.644 23.2796 329.181 23.5018L334.349 25.6407C334.886 25.8629 335.141 26.4781 334.918 27.0149C334.696 27.5516 334.081 27.8067 333.544 27.5845L328.376 25.4456C327.84 25.2234 327.585 24.6082 327.807 24.0714Z"
+                            fill="white" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M315.859 8.99896C310.26 8.99896 305.723 13.534 305.723 19.1264C305.723 24.7189 310.26 29.2539 315.859 29.2539C321.459 29.2539 325.996 24.7189 325.996 19.1264C325.996 13.534 321.459 8.99896 315.859 8.99896ZM303.619 19.1264C303.619 12.3705 309.1 6.89526 315.859 6.89526C322.619 6.89526 328.1 12.3705 328.1 19.1264C328.1 25.8823 322.619 31.3576 315.859 31.3576C309.1 31.3576 303.619 25.8823 303.619 19.1264Z"
+                            fill="white" />
+                        <path
+                            d="M315.859 25.6475C318.035 25.6475 318.035 23.4738 318.035 23.4738V14.779C318.035 14.779 318.035 12.6053 315.859 12.6053C313.684 12.6053 313.684 14.779 313.684 14.779V23.4738C313.684 23.4738 313.684 25.6475 315.859 25.6475Z"
+                            fill="white" />
+                    </svg>
+                    <div class="player-button">
+                        <img src="style/img/play.png" alt="Play" class="play-icon">
+                    </div>
+                </div> -->
+                <div class="input-wrapper">
+                    <div class="input-container">
+                        <input type="text" placeholder="Enter your email">
+                        <button class="btn-primary" onclick="submitForm()">Notify me</button>
+                    </div>
+                    <p class="blague">*Subscribe to our newletter and stay tunned. Don't worry we won't spam ;)</p>
+                </div>
+
+            </div>
+            <img src="style/img/nebulite.png" alt="" class="nebulite-bg">
+        </div>
+    </div>
+    <div class="container-background-black">
+        <div class="container-text">
+            <h1>The w<img src="style/img/eye-logo.png" alt="" class="eye-logo">rld is shattering,</h1>
+            <h1> time is of the essence</h1>
+        </div>
+    </div>
+    <div class="container">
+        <p class="content">The nebulite's heist is shattering the world. Gravity is not functioning properly anymore
+            and the world you used to know is becoming a maze, borders dissapear.
+            With the use of the sun fragments they plan to rewrite the fabric of the universe according to their own
+            desires. The fate of the solar system and the entire galaxy hangs in the balance.</p>
+        <img src="style/img/4A5AFC6B.png" alt="" class="absolute pos-1 scale-right">
+        <img src="style/img/4A5AFC6D.png" alt="" class="absolute pos-2 scale-down">
+        <img src="style/img/4A5AFC7B.png" alt="" class="absolute pos-3 scale-down">
+        <img src="style/img/4A5AFC7C.png" alt="" class="absolute pos-4 scale-down">
+        <img src="style/img/4A5AFC7F.png" alt="" class="absolute pos-5 scale-down">
+        <img src="style/img/4A5AFC74.png" alt="" class="absolute pos-6 scale-down">
+        <img src="style/img/4A5AFC75.png" alt="" class="absolute pos-7 scale-down">
+        <img src="style/img/4A5AFC77.png" alt="" class="absolute pos-8 scale-down">
+        <img src="style/img/BF267BF9.png" alt="" class="absolute pos-9 scale-down">
+        <img src="style/img/BF267BFB.png" alt="" class="absolute pos-10 scale-down">
+    </div>
+
+
+    <div class="general-container-hands">
+        <div class="container-text">
+            <h1>Bec<img src="style/img/eye-logo.png" alt="" class="eye-logo"> me Agent Steve</h1>
+            <p class="important">The nebulite heist is shattering the world, the gravity is not functioning properly
+                anymore and every
+                step becomes a maze, borders disappear.
+                With the use of the sun fragments, they plan to rewrite the fabric of the universe according to their
+                own
+                desires. The fate of the solar system and the entire galaxy hangs in the balance.</p>
+        </div>
+
+        <img src="style/img/RHand.png" alt="" class="right-hand"
+            style="transition: transform 0.5s ease; transform: translateY(0%);">
+        <div class="spacer"></div> <!-- Add this spacer element -->
+        <img src="style/img/LHand.png" alt="" class="left-hand">
+
+        <div class="container-hands-general">
+            <div class="container-hand-text">
+                <p>
+                    As you step into the shoes of Agent Steve, you find yourself in a dire situation with the solar
+                    system
+                    teetering on the edge of collapse. Humanity's survival hangs by a thread. But Steve isn't your
+                    average
+                    agent; he's a master of the paranormal and a specialist in unraveling spacetime mysteries. Get ready
+                    to
+                    channel your inner Agent Steve, brace yourself for an epic adventure, and dive headfirst into a
+                    cosmic
+                    journey to save humanity from impending doom.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="foot-container">
+            <div class="left">
+                <img src="style/img/logo.svg" class="foot-logo" alt="">
+                <div class="term">
+                    <a href="">Policy privacy</a>
+                    <img src="style/img/separarate.png" alt="">
+                    <a href="">Terms and condition</a>
+                </div>
+            </div>
+            <div class="socials">
+                <p>Follow us:</p>
+                <div class="social-first-part">
+                    <a href="" class="social-icon"><img src="style/img/socials/youtube.svg" alt=""></a>
+                    <a href="" class="social-icon"><img src="style/img/socials/twitter.svg" alt=""></a>
+                    <a href="" class="social-icon"><img src="style/img/socials/facebook.svg" alt=""></a>
+                </div>
+                <div class="social-second-part">
+                    <a href="" class="social-icon"><img src="style/img/socials/twitch.svg" alt=""></a>
+                    <a href="" class="social-icon"><img src="style/img/socials/instagram.svg" alt=""></a>
+                    <a href="" class="social-icon"><img src="style/img/socials/linkedin.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="js/scrollarm.js"></script>
+    <script type="text/javascript" src="js/hidenav2.js"></script>
+</body>
+
+</html>

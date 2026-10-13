@@ -1,0 +1,124 @@
+.container-background {
+    min-height: 100vh;
+    background-color: #232323;
+    padding-top: 7rem;
+    padding-bottom: calc(5rem + 10%);
+}
+
+
+.container-background h1 {
+    color: #fff;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: calc(32px + 1.5vw);
+    font-weight: 400;
+    margin-bottom: 3%;
+}
+
+.container-background p {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: calc(24px + 0.35vw);
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+}
+
+
+.wrapper-text {
+    padding: 2rem 8rem;
+    width: 80%;
+}
+
+.grid {
+    width: 80%;
+    margin: auto;
+}
+
+.filter-job {
+    display: inline-flex;
+    border-radius: 68px;
+    padding: 0.75rem 2rem;
+    gap: 15px;
+    border: 1px solid #fff;
+}
+
+
+.filters{
+    gap: 15px;
+}
+
+.job-container h2 {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: calc(28px + 0.45vw);
+    font-weight: 600;
+}
+
+.job-container {
+    border-bottom: solid 1px rgba(255, 255, 255, 0.45);
+    padding: 5rem 0rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.job-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.job-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: fit-content;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    text-decoration: underline;
+    font-size: calc(20px + 0.25vw);
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 768px) {
+    .wrapper-text {
+        width: 80%;
+        margin: auto;
+        padding: 0;
+        object-fit: contain;
+    }
+
+    .filter-job {
+        align-items: center;
+        padding: 1.5% 5%;
+    }
+
+    .filter-job img {
+        width: 15%;
+        height: auto;
+    }
+
+    .filters {
+        display: flex;
+        gap: 15px;
+        flex-direction: column;
+        flex-grow: 0;
+        align-items: flex-start;
+    }
+    .job-container {
+        flex-direction: column;
+    }
+    .job-left {
+        margin-bottom: 15px;
+    }
+    .job-right img {
+        width: 6%;
+    }
+    .job-container {
+        padding: 3rem 0rem;
+    }
+    footer {
+        bottom: -12%!important;
+    }
+}
